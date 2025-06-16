@@ -32,7 +32,7 @@ async function getUserAndToken(): Promise<{ user: User | null, token: string | n
   }
 }
 
-export default async function ProfilePage({ params }: { params: { username: string } }) {
+export default async function ProfilePage() {
   const { user, token } = await getUserAndToken();
 
   if (!user) return <p>Usuário não encontrado ou não autorizado</p>;
