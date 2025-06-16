@@ -30,13 +30,12 @@ async function getUser(username: string, token: string): Promise<User | null> {
   }
 }
 
-export default async function Page({ params }: { params: Promise<{ username: string }> }) {
-  const resolvedParams = await params;
+export default async function Page({ params }: { params: { username: string } }) {
   const token = await getCookieServer();
 
   if (!token) redirect('/');
 
-  const user = await getUser(resolvedParams.username, token);
+  const user = await getUser(params.username, token);
   if (!user) {
     return <p>Usuário não encontrado.</p>;
   }
