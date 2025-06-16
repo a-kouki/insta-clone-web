@@ -1,4 +1,3 @@
-// app/[username]/page.tsx
 import UserProfile from './components/users';
 import { getCookieServer } from '@/lib/cookiesServer';
 import { redirect } from 'next/navigation';
@@ -13,6 +12,7 @@ interface User {
   followings: string[];
   followers: string[];
 }
+
 
 async function getUser(username: string, token: string): Promise<User | null> {
   try {
@@ -30,16 +30,19 @@ async function getUser(username: string, token: string): Promise<User | null> {
   }
 }
 
-export default async function Page({ params }: { params: { username: string } }) {
+export default async function Page({ params }: { params: Promise<{ username: string }> }) {
+  const { username } = await params; 
+
   const token = await getCookieServer();
 
   if (!token) redirect('/');
 
-  const user = await getUser(params.username, token);
+  const user = await getUser(username, token);
   if (!user) {
     return <p>Usuário não encontrado.</p>;
   }
 
   return <UserProfile user={user} token={token} />;
 }
+
 
