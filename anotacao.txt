@@ -1,0 +1,4 @@
+sigup -> dashbord -> instagram
+
+
+npm run dev

@@ -1,0 +1,219 @@
+.mainEdit {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  gap: 10vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  margin-top: 20px;
+  margin-left: 600px;
+
+  .profilecontainer {
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    gap: 16px;
+
+    h1{
+        font-size: 25px;
+    }
+
+    
+    .profile{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        background-color: rgb(240, 240, 240);
+        padding: 10px 20px;
+        border-radius: 10px;
+        img {
+        width: 80px;
+        height: 80px;
+
+        border-radius: 50%;
+        }
+
+        .userinfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        span:first-child {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        span:last-child {
+            color: gray;
+            font-size: 0.9rem;
+        }
+        }
+
+        .changephoto {
+        margin-left: 100px;
+        padding: 8px 12px;
+        background-color: #3897f0;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #2f80ed;
+        }
+        }
+        }
+    }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+
+    span{
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    input {
+      height: 3rem;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid rgb(230, 230, 230) ;
+    }
+  }
+
+  .bioStyle{
+    h1{
+        font-size: 23px;
+    }
+
+    textarea{
+        
+        width: 100%;
+        height: 5rem;
+        padding-left: 10px;
+        resize:none;
+        border-radius: 10px;
+        border-color: rgb(230, 230, 230) ;
+    }
+  }
+
+  .buttonsContainer {
+  display: flex;
+  justify-content: space-between; /* empurra os botões para extremos */
+  margin-top: 20px; /* só um espaçamento opcional */
+
+  .delete{
+    width: 100px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  }
+}
+
+.saveButton {
+    width: 100px;
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.bioPreview {
+  margin-top: 20px;
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+
+//config for menu photo edit
+.configphoto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); // Tela clara
+  z-index: 999;
+
+  .options {
+    background-color: white;
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      font-size: 18px;
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+
+  .cropContainer {
+    width: 320px;
+    height: 380px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cropHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    button {
+      font-size: 18px;
+      padding: 5px 10px;
+      background: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .sendChange{
+        font-size: 15px;
+        padding: 5px 10px;
+        background-color: #0070f3;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+  }
+
+  .cropArea {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background-color: black;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+}

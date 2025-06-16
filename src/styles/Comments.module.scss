@@ -1,0 +1,43 @@
+
+  .publish_comment {
+    display: flex;
+    align-items: center;
+    justify-content: center; // Centraliza horizontalmente os itens
+    gap: 10px;
+    padding: 10px;
+
+    border-top: 1px solid #dbdbdb;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    width: 100%; // Garante que a div ocupe toda a largura da coluna lateral
+
+    flex-wrap: wrap;
+  
+    span:last-child {
+      color: #0095f6;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+  
+  .publish_comment textarea {
+    flex: 1;
+    max-width: 80%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #262626;
+    background-color: transparent;
+    padding: 8px 0px;
+    margin: 0;
+    line-height: 20px;
+    height: 35px;
+    overflow: hidden;
+  
+    &::placeholder {
+      color: #8e8e8e;
+    }
+  }
