@@ -30,8 +30,11 @@ async function getUser(username: string, token: string): Promise<User | null> {
   }
 }
 
-export default async function Page({ params }: { params: Promise<{ username: string }> }) {
-  const { username } = await params; 
+export type paramsType = Promise<{ username: string }>;
+
+
+export default async function Page( props : { params: paramsType }) {
+  const { username } = await props.params; 
 
   const token = await getCookieServer();
 
