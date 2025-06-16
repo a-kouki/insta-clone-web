@@ -107,7 +107,7 @@ export default function Signup() {
             required
             name="nameuser"
             placeholder="name user"
-            maxLength={10}
+            maxLength={20}
             className={`${styles.input} ${errorField === 'nameuser' ? styles.inputError : ''}`}
           />
 
