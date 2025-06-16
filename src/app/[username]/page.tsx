@@ -14,19 +14,20 @@ interface User {
   followers: string[];
 }
 
-// Função sem async/await, retornando Promise<User | null>
-function getUser(username: string, token: string): Promise<User | null> {
-  return api
-    .get(`/${username}`, {
+async function getUser(username: string, token: string): Promise<User | null> {
+  try {
+    const response = await api.get(`/${username}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
-    })
-    .then(response => response.data)
-    .catch(err => {
-      console.error('Erro ao buscar usuário:', err);
-      return null;
+      // axios não usa cache: 'no-store'
     });
+
+    return response.data;
+  } catch (err) {
+    console.error('Erro ao buscar usuário:', err);
+    return null;
+  }
 }
 
 export default async function Page({ params }: { params: { username: string } }) {
@@ -35,10 +36,10 @@ export default async function Page({ params }: { params: { username: string } })
   if (!token) redirect('/');
 
   const user = await getUser(params.username, token);
-
   if (!user) {
     return <p>Usuário não encontrado.</p>;
   }
 
   return <UserProfile user={user} token={token} />;
 }
+
