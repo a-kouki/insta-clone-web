@@ -9,6 +9,8 @@ Users can register, log in, create posts, upload images, follow others, and view
 
 👉 🎯 **Try it now:** 👉 **[https://insta-clone-web-nine.vercel.app/](https://insta-clone-web-nine.vercel.app/)
 
+> You can test the app using a fictional email, e.g. `john@example.com`.
+
 ---
 
 
