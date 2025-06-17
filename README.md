@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📸 Insta Clone Web
 
-## Getting Started
+A fullstack project that replicates a simplified version of Instagram, built using **Next.js (App Router)** on the frontend and **Node.js + Express + Prisma + PostgreSQL** on the backend.
 
-First, run the development server:
+Users can register, log in, create posts, upload images, follow others, and view profile pages — all styled and responsive.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧱 Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🔙 Backend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Node.js + Express.js** – RESTful API
+- **Prisma ORM** – PostgreSQL integration
+- **JWT** – Token-based authentication
+- **Cloudinary** – Image hosting and CDN
+- **express-fileupload** – Image uploads
+- **fs / path** – Local image management (fallback or dev)
 
-## Learn More
+### 🔜 Frontend
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 14+ (App Router)**
+- **React + TypeScript**
+- **Axios** – API communication
+- **SCSS Modules** – Scoped styles
+- **Client-side rendering** for dynamic features
+- **Cookie-based Auth** – For session management
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📷 Features
 
-## Deploy on Vercel
+- ✅ User registration & login  
+- ✅ Upload & update profile images  
+- ✅ Create image posts
+- ✅ Like and comment on posts  
+- ✅ View comments  
+- ✅ Follow/unfollow users  
+- ✅ See followers/followings in a modal  
+- ✅ Profile page with user details & posts  
+- ✅ Post preview modal with navigation  
+- ✅ Protected routes using JWT  
+- ✅ Image uploads via Cloudinary  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
