@@ -5,6 +5,12 @@ A fullstack project that replicates a simplified version of Instagram, built usi
 Users can register, log in, create posts, upload images, follow others, and view profile pages — all styled and responsive.
 
 ---
+## 🔗 Live Demo
+
+👉 🎯 **Try it now:** 👉 **[https://insta-clone-web-nine.vercel.app/](https://insta-clone-web-nine.vercel.app/)
+
+---
+
 
 ## 🧱 Technologies Used
 
@@ -23,6 +29,7 @@ Users can register, log in, create posts, upload images, follow others, and view
 - **React + TypeScript**
 - **Axios** – API communication
 - **SCSS Modules** – Scoped styles
+- **Bootstrap Icons** – UI elements and icons (`bi bi-...`)
 - **Client-side rendering** for dynamic features
 - **Cookie-based Auth** – For session management
 
@@ -41,5 +48,21 @@ Users can register, log in, create posts, upload images, follow others, and view
 - ✅ Post preview modal with navigation  
 - ✅ Protected routes using JWT  
 - ✅ Image uploads via Cloudinary  
+
+---
+
+## 🖼️ Preview
+
+### 🔐 Login / Sign Up
+![Image](https://github.com/user-attachments/assets/91736709-4d17-4db5-9058-93dd44cd1c76)
+![Image](https://github.com/user-attachments/assets/627431f1-1606-4d22-a902-2e5cc35068a7)
+ 
+### 🏠 Home Page
+![Image](https://github.com/user-attachments/assets/9a9f3814-306b-4e48-92eb-756c9cbd55cc)
+
+### 🙋‍♂️ Profile Page
+![Image](https://github.com/user-attachments/assets/25879c38-f66d-4e9e-bdde-eea617ba50c1)
+![Image](https://github.com/user-attachments/assets/f788c2a1-dbc3-4d77-812d-eae431364703)
+
 
 
